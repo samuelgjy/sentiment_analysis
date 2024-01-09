@@ -10,7 +10,8 @@ System Diagram:
 For Text Sentiment Analysis, our team ran the pre-processed dataset through an instance of the Valence Aware Dictionary for Sentiment Reasoning (VADER) Sentiment Intensity Analyzer provided in the Natural Language Toolkit library. VADER is a lexical method of sentimental analysis whose lexicon is built on the combined ratings of a number of human raters. The Sentiment Intensity Analyzer will calculate the emotional polarity of each review and return a rating, ranging from -1 for negative to 1 for positive which will be appended to the dataset.
 ![image](https://github.com/samuelgjy/sentiment_analysis/assets/110824653/44f932db-4d8a-4407-ba03-20a77062ebd5)
 
-VADER average sentiment over time
+
+VADER average sentiment over time.
 ![image](https://github.com/samuelgjy/sentiment_analysis/assets/110824653/aeafb481-a9f9-4ef6-98db-74e97474e15c)
 
 
