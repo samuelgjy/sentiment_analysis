@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="static/readmore.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">  
+</head>
+<body>
+    <header> 
+        <div class="mynavbar">
+            <div class="mynavbar-left">
+                <a class="logo" href={{url_for("index")}}><h2>W<i class="fa fa-bed fa-spin"></i>ereToStay</h2></a>
+            </div>
+     
+            <div class="mynavbar-right">
+                <form action="/search"method="post" enctype=multipart/form-data>
+                    <input type="text" name="searchinput" placeholder="Enter Hotel Name:" >
+                
+                    <button type="submit" name ="form" value="Submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="nofoot">
+        
+    
+        <h3>Showing results for {{searchinput}}</h3>
+
+        <h3 class="reviewtag">Reviews</h3>
+        <!--<h4>Found "" reviews out of "" reviews</h4> insert review tag in ""-->
+        <section class="section">
+            <section class="stars">
+                <div class="dividers">
+                    <img class="donut" src="{{piechart}}">
+                </div>
+                <div class="dividers">
+                    
+                    <!--Review stars-->
+                    <!--if rating is a float -0.5 and convert to int-->
+                    {%if (rating*10)%10 == 5%}
+                    
+                    <!-- from range 1 to rating, display full stars-->
+                    {% for ii in range(1, (rating - 0.5 + 1)|int) %}
+                    <i class="fa fa-star "></i>
+                    {% endfor %}
+                
+                    <!-- add one half star for 0.5 deducted-->
+                    <i class="fa fa-star-half-o "></i>
+                    <!-- add empty stars behind-->
+                    {% for ii in range(1, (5-rating-0.5)|int) %}
+                    <i class="fa fa-star-o"></i>
+                    {%endfor%}
+
+                    <!-- all full stars if rating does not end with 0.5-->
+                    {%elif (rating*10)%10 == 0%}
+                    {% for i in range(1, (rating+1)|int) %}
+                    <i class="fa fa-star"></i>
+                    {%endfor%}
+                    <!-- add empty stars behind-->
+                    {% for ii in range(1, (5-rating+1)|int) %}
+                    <i class="fa fa-star-o"></i>
+                    {%endfor%}
+                    {%endif%}
+            
+                </div>
+                
+            </section>
+            <section>
+                <h3>Pros and Cons</h3>
+                <div class="row b-t padding_top_bottom_10">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="comment more font_size_14"> 
+                        
+                        <div class="dividers"> <img src="{{Pros}}"> </div>
+                        <div class="dividers"> <img src="{{Cons}}"></div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </section>
+            <section class = "visuals">
+                <h3>Overall Sentiment of Hotel</h3>
+                <div class="row b-t padding_top_bottom_10">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="comment more font_size_14"> 
+                        
+                        <div class="dividers"><img src="{{Histogram}}"></div>
+                        <div class="dividers">{%include "bubble.html"%}</div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="visuals">
+                <h3>Sentiment of Hotel Over Time</h3>
+                <div class="row b-t padding_top_bottom_10">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="comment more font_size_14"> 
+                            <div class="dividers"><img src="{{sentimentovertime}}"></div>
+                            <div class="dividers"><img src="{{totalsentimentbar}}"> </div>
+                       
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            
+            <section class = "visuals">
+                <h3>Emotional Analysis</h3>
+                <div class="row b-t padding_top_bottom_10">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="comment more font_size_14"> 
+                            <div class="dividers">{%include "emotions.html"%}</div>
+                    
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="visuals">
+                <h3>LDA </h3>
+                    <div class="link">
+                        <a class="link" href={{url_for("lda")}}>click here to view LDA graph</a>
+                    </div>
+                    
+            </section>
+        </section>
+    </div>
+    <footer >
+        <div class="grp">
+        <p>Made by Team 57, Sheryl Tan, Wong Yu Fei, Faith Lim, Samuel Goh, Yuchen Jiang </p>
+        </div>
+    </footer>
+</body>
+
+</html>

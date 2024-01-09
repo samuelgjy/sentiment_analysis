@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el3210416801251519364349937603"></div>
+<script type="text/javascript">
+
+var ldavis_el3210416801251519364349937603_data = {"mdsDat": {"x": [-0.04969731127438058, 0.015721566051449934, 0.04599884141539834, -0.01202309619246769], "y": [-0.0091571975197346, 0.043602384670417715, -0.0267954454593288, -0.00764974169135434], "topics": [1, 2, 3, 4], "cluster": [1, 1, 1, 1], "Freq": [42.4349436240723, 25.21173175587657, 23.717148537452267, 8.636176082598865]}, "tinfo": {"Term": ["good", "room", "stay", "staff", "clean", "hotel", "good", "room", "stay", "hotel", "clean", "staff", "room", "clean", "staff", "hotel", "stay", "good", "stay", "staff", "hotel", "clean", "room", "good", "clean", "good", "stay", "staff", "hotel", "room"], "Freq": [5.0, 7.0, 6.0, 6.0, 5.0, 7.0, 4.3694276550277324, 3.104031749565908, 2.348220724444829, 2.6520355527353194, 1.7896673612783587, 1.9540928645209832, 3.221436057897796, 1.8998756025683319, 1.6196319696374066, 1.8512214291895157, 0.8200556075106157, 0.22301429335738523, 2.454478016992103, 2.164423450363581, 2.361781528537529, 1.1286508935864485, 0.738619729205527, 0.21609247525784722, 0.5511029816648043, 0.5449831608268952, 0.5515577037997689, 0.5508379702591907, 0.5505698792877849, 0.5514588172391682], "Total": [5.0, 7.0, 6.0, 6.0, 5.0, 7.0, 5.35351758446986, 7.6155463539084, 6.174312052747316, 7.415608389750149, 5.369296839097943, 6.288986254781162, 7.6155463539084, 5.369296839097943, 6.288986254781162, 7.415608389750149, 6.174312052747316, 5.35351758446986, 6.174312052747316, 6.288986254781162, 7.415608389750149, 5.369296839097943, 7.6155463539084, 5.35351758446986, 5.369296839097943, 5.35351758446986, 6.174312052747316, 6.288986254781162, 7.415608389750149, 7.6155463539084], "Category": ["Default", "Default", "Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4", "Topic4"], "logprob": [6.0, 5.0, 4.0, 3.0, 2.0, 1.0, -1.3115, -1.6534, -1.9324, -1.8108, -2.2041, -2.1162, -1.0956, -1.6236, -1.7832, -1.6496, -2.4638, -3.7659, -1.3064, -1.4322, -1.3449, -2.0833, -2.5073, -3.7364, -1.7899, -1.8011, -1.7891, -1.7904, -1.7909, -1.7893], "loglift": [6.0, 5.0, 4.0, 3.0, 2.0, 1.0, 0.6541, -0.0403, -0.1095, -0.1711, -0.2415, -0.3117, 0.5175, 0.339, 0.0213, -0.0099, -0.6409, -1.8004, 0.5165, 0.3723, 0.2948, -0.1207, -0.8942, -1.7708, 0.1727, 0.1645, 0.0338, 0.0141, -0.1512, -0.1762]}, "token.table": {"Topic": [1, 2, 3, 4, 1, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4], "Freq": [0.3724882531054114, 0.3724882531054114, 0.1862441265527057, 0.1862441265527057, 0.7471722912807255, 0.18679307282018137, 0.4045521071671744, 0.26970140477811627, 0.26970140477811627, 0.13485070238905814, 0.3939310274778067, 0.3939310274778067, 0.1313103424926022, 0.1313103424926022, 0.31801627781894304, 0.31801627781894304, 0.31801627781894304, 0.15900813890947152, 0.3239227274089721, 0.16196136370448605, 0.3239227274089721, 0.16196136370448605], "Term": ["clean", "clean", "clean", "clean", "good", "good", "hotel", "hotel", "hotel", "hotel", "room", "room", "room", "room", "staff", "staff", "staff", "staff", "stay", "stay", "stay", "stay"]}, "R": 6, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [1, 2, 3, 4]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el3210416801251519364349937603", ldavis_el3210416801251519364349937603_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el3210416801251519364349937603", ldavis_el3210416801251519364349937603_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.3.1/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el3210416801251519364349937603", ldavis_el3210416801251519364349937603_data);
+            })
+         });
+}
+</script>

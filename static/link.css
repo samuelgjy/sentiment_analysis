@@ -1,0 +1,24 @@
+
+/* code to edit design of page */
+body{
+    
+   
+    display:grid; 
+    grid-template-rows: auto 1fr auto; 
+    min-height:100vh; 
+
+    min-width:100vh;
+}
+
+
+
+
+
+.link{
+    text-align:center !important;
+}
+
+
+
+
+      

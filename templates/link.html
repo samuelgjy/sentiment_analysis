@@ -1,0 +1,16 @@
+<!--to include button to go back to index without needing to constantly overwrite lda's html-->
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/link.css">
+        <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+        
+    </head>
+    <body>
+        <div>{%include "pickle_lda_model_sklearn.html"%}</div>
+        <a class="link" href={{url_for("index")}}>click here to go back</a>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+
+/* code to edit design of page */
+body{
+    
+   
+    display:grid; 
+    grid-template-rows: auto 1fr auto; 
+    min-height:100vh; 
+    background-color: #395B64 !important;
+    color:white !important;
+    min-width:100vh;
+}
+
+.nofoot{
+    margin-bottom:80px;
+}
+.grp{
+    text-align: center;
+    padding:25px;
+
+}
+footer {
+  
+    background-image:linear-gradient(#A5C9CA,#395B64);
+    font-family: 'Agency FB';
+    color: black;
+    
+   
+ 
+   
+ 
+   
+    
+    
+    
+    
+}
+.section{
+    box-shadow:inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    border:1px solid white;
+    padding:15px;
+    margin:20px;
+}
+Section{
+    
+    border-bottom:1px solid white;
+    margin-top:0px;
+    margin-bottom:0px;
+    overflow:hidden;
+    
+   
+}
+.reviewtag{
+    text-align:center;
+}
+h3{
+    padding:15px;
+    margin:4px;
+    font-size:30px;
+  
+}
+.mynavbar {
+    overflow: hidden;
+    width: 100%;
+    
+
+    padding: 0 40px;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+
+}
+
+.mynavbar-left, .mycom {
+    overflow: hidden;
+    float: left;
+    font-size: 20px;
+    font-family: "Al-Amin";
+   
+    
+
+}
+    .mynavbar-left a:hover {
+        color: purple;
+        text-decoration:none;
+    }
+    .mynavbar-right{
+        float:right;
+    }
+
+h2{
+    font-weight:700;
+}
+#more {display: none;}
+header{
+  
+    font-size:20px;
+    height:100%;
+    max-height:300px;
+    background-image:linear-gradient(#395B64,#A5C9CA);
+    box-shadow:2px;
+
+    
+}
+
+.logo{
+    font-family: Trattatello, fantasy;
+    color: #E7F6F2;
+}
+form{
+    margin-top:20px;
+    text-align:center;
+    color:black;
+
+}
+.stars{
+    text-align:center;
+    font-size:100px;
+    color: yellow;
+    text-shadow: 10px 5px 5px darkgoldenrod  ;
+}
+
+.comment {
+    width: 93%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  a.morelink {
+    outline: none;
+    color: #5bc0de !important;
+  }
+  .morecontent span {
+    display: none;
+  
+  }
+  
+  img{
+    margin:20px;
+    
+  }
+.link{
+    text-align:center !important;
+}
+.comment{
+    text-align: center;
+}
+.dividers {
+    display: inline-block;
+    vertical-align: middle;
+    
+  }
+.donut{
+    max-width:450px;
+    max-height:450px;
+}
+img{
+    max-width:700px;
+    max-height:700px;
+}
+
+
+
+      
